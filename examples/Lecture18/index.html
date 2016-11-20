@@ -14,7 +14,11 @@
       <h3>Shopping List:</h3>
       <input type="text" ng-model="search">
       <ul>
-        <li ng-repeat="item in shoppingList | filter : search">{{ item }}</li>
+        <li ng-repeat="item in shoppingList3 | filter : search">{{ item.name }} is it the first one : {{$first}}, {{$index}}, {{$last}}</li>
+      </ul>
+<p>custome filter list</p>
+      <ul>
+        <li ng-repeat="item in shoppingList3 | custom : search">{{ item.name }} is it the first one : {{$first}}, {{$index}}, {{$last}}</li>
       </ul>
     </div>
   </body>
